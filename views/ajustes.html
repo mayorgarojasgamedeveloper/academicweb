@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <title>Inicio</title>
+</head>
+<body>
+  <!-- NAV SE AGREGA CON JQUERY -->
+  <div id="navegation"></div>
+
+  <section class="jumbotron">
+    <h1 class="display-4 text-center">Ajustes</h1>
+  </section>
+
+
+  <section class="container">
+
+    <form>
+      <p class="h3">Datos Personales</p>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="nombre" id="nombre" value="Manuel Fernando">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Corero</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" name="correo" id="correo" value="fernando@gmail.com">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Apellido Paterno</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="apellidoP" id="apellidoP" value="Mayorga">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Apellido Materno</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="apellidoM" id="apellidoM" value="Rojas">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">curriculum</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" name="curriculum" id="curriculum" rows="3">Estudio en CUCEI</textarea>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary">Cambiar</button>
+    </form>
+
+    <hr class="my-4">
+
+    <form>
+      <p class="h3">Imagen de Perfil</p>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Subir</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile01">
+          <label class="custom-file-label" name="imagen" id="imagen" for="inputGroupFile01">Buscar archivo</label>
+        </div>
+      </div>
+    </form>
+
+    <hr class="my-4">
+
+    <form>
+      <p class="h3">Cambiar Contraseña</p>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Nueva Contraseña</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Repetir Contraseña</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary">Cambiar</button>
+    </form>
+
+  </section>
+
+  <!-- SCRIPT -->
+  <script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <!-- VISTAS -->
+  <script src="../js/navegation.js" type="text/javascript"></script>
+  <script src="../js/views/ajustes.js" type="text/javascript"></script>
+</body>
+</html>
