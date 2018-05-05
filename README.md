@@ -11,7 +11,6 @@ Academicos/admin
   carpeta.html*
 
   usuario/
-    index.html
     crear.html
     eliminar.html
 
