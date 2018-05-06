@@ -14,13 +14,26 @@
   <div id="navegation"></div>
 
   <section class="jumbotron">
-    <h1 class="display-4 text-center">Línea innovadora de investigación aplicada al desarrollo tecnológico</h1>
+    <h1 class="display-4 text-center">Prototipo</h1>
   </section>
 
   <section class="container">
     <form novalidate>
-      <label for="nombre">Nombre de la Linea: <span class="req">*</span></label>
-      <input type="text" class="form-control" id="linea" name="linea" placeholder="Nombre de la Linea" data-type="nombre">
+      <label for="nombre">Nombre: <span class="req">*</span></label>
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del prototipo" data-type="nombre">
+      <label for="nombre">Autores: <span class="req">*</span></label>
+      <input type="text" class="form-control" id="autores" name="autores" placeholder="Autores" data-type="nombres">
+      <label for="nombre">Fecha: <span class="req">*</span></label>
+      <input type="date" class="form-control" id="fecha" name="fecha" data-type="fecha">
+
+      <label for="linea">Linea:</label>
+      <select class="form-control" id="linea">
+        <option value="0">Seleccione una linea...</option>
+      </select>
+
+      <label for="nombre">No. Regirstro: <span class="req">*</span></label>
+      <input type="text" class="form-control" id="no_registro" name="no_registro" placeholder="no_registro" data-type="nombre">
+
       <br>
       <button type="button" id="btn_subir" class="btn btn-primary">Subir</button>
     </form>
@@ -34,6 +47,6 @@
   <!-- VISTAS -->
   <script src="../../js/validation.js" type="text/javascript"></script>
   <script src="../../js/subnavegation.js" type="text/javascript"></script>
-  <script src="../../js/views/crear/linea.js" type="text/javascript"></script>
+  <script src="../../js/views/crear/prototipo.js" type="text/javascript"></script>
 </body>
 </html>

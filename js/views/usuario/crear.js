@@ -2,6 +2,16 @@ $('document').ready(function() {
 
   $('#btn_crear').on('click', function() {
 
+    var status = 0;
+    $('.error').remove();
+    status += validar($('#usuario'));
+    status += validar($('#contrasena'));
+
+
+    if(status > 0) {
+      return 0;
+    }
+
     var usuario = {
       usuario: $('#usuario').val(),
       contrasena: $('#contrasena').val(),
@@ -22,7 +32,7 @@ $('document').ready(function() {
     crearUsuario.fail(function() {
       alertify.error('Error al crear al usuario');
     });
-
+    
   });
 
 });

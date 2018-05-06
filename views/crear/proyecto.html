@@ -14,13 +14,22 @@
   <div id="navegation"></div>
 
   <section class="jumbotron">
-    <h1 class="display-4 text-center">Línea innovadora de investigación aplicada al desarrollo tecnológico</h1>
+    <h1 class="display-4 text-center">Producción académica</h1>
   </section>
 
   <section class="container">
     <form novalidate>
-      <label for="nombre">Nombre de la Linea: <span class="req">*</span></label>
-      <input type="text" class="form-control" id="linea" name="linea" placeholder="Nombre de la Linea" data-type="nombre">
+      <label for="nombre">Nombre del Proyecto: <span class="req">*</span></label>
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del Proyecto" data-type="nombre">
+      <label for="nombre">Fecha de Inicio: <span class="req">*</span></label>
+      <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" data-type="fecha">
+      <label for="nombre">Fecha de Fin: <span class="req">*</span></label>
+      <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" data-type="fecha">
+      <label for="nombre">Colaboradores: <span class="req">*</span></label>
+      <input type="text" class="form-control" id="colaboradores" name="colaboradores" placeholder="Colaboradores" data-type="nombres">
+      <label for="nombre">Instituciones: <span class="req">*</span></label>
+      <input type="text" class="form-control" id="instituciones" name="instituciones" placeholder="Instituciones" data-type="nombres">
+
       <br>
       <button type="button" id="btn_subir" class="btn btn-primary">Subir</button>
     </form>
@@ -34,6 +43,6 @@
   <!-- VISTAS -->
   <script src="../../js/validation.js" type="text/javascript"></script>
   <script src="../../js/subnavegation.js" type="text/javascript"></script>
-  <script src="../../js/views/crear/linea.js" type="text/javascript"></script>
+  <script src="../../js/views/crear/proyecto.js" type="text/javascript"></script>
 </body>
 </html>
