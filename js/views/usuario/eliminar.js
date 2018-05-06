@@ -1,3 +1,6 @@
+if(Cookies.get('sesion') == null || Cookies.getJSON('sesion')["permisos"] == false)
+  window.location.replace("../index.html");
+
 $('document').ready(function() {
 
   var listaUsuarios = $.ajax({url: `http://localhost:3000/usuario`, method: `get`});

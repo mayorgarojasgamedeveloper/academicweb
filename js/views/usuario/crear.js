@@ -1,3 +1,6 @@
+if(Cookies.get('sesion') == null || Cookies.getJSON('sesion')["permisos"] == false)
+  window.location.replace("../index.html");
+
 $('document').ready(function() {
 
   $('#btn_crear').on('click', function() {
@@ -32,7 +35,7 @@ $('document').ready(function() {
     crearUsuario.fail(function() {
       alertify.error('Error al crear al usuario');
     });
-    
+
   });
 
 });

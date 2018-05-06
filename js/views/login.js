@@ -1,3 +1,6 @@
+if(Cookies.get('sesion') != null)
+  window.location.replace("./index.html");
+
 $('document').ready(function() {
 
   $('#btn_login').on('click', function() {
