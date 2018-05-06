@@ -40,10 +40,7 @@ $('document').ready(function() {
         function(){
           alertify.error('Cancel');
       });
-
     }
-
-
   });
 
 });

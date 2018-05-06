@@ -20,55 +20,46 @@
 
   <section class="container">
 
-    <form>
+    <form novalidate>
       <p class="h3">Datos Personales</p>
       <div class="form-group row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" name="nombre" id="nombre" value="Manuel Fernando">
+          <input type="text" class="form-control" name="nombre" id="nombre" value="DEFAULT" data-type="nombre">
         </div>
       </div>
       <div class="form-group row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Corero</label>
+        <label for="inputPassword" class="col-sm-2 col-form-label">Correo</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" name="correo" id="correo" value="fernando@gmail.com">
+          <input type="email" class="form-control" name="correo" id="correo" value="DEFAULT" data-type="correo">
         </div>
       </div>
       <div class="form-group row">
         <label for="inputPassword" class="col-sm-2 col-form-label">Apellido Paterno</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" name="apellidoP" id="apellidoP" value="Mayorga">
+          <input type="text" class="form-control" name="apellidoP" id="apellidoP" value="DEFAULT" data-type="nombre">
         </div>
       </div>
       <div class="form-group row">
         <label for="inputPassword" class="col-sm-2 col-form-label">Apellido Materno</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" name="apellidoM" id="apellidoM" value="Rojas">
+          <input type="text" class="form-control" name="apellidoM" id="apellidoM" value="DEFAULT" data-type="nombre">
         </div>
       </div>
       <div class="form-group row">
         <label for="inputPassword" class="col-sm-2 col-form-label">curriculum</label>
         <div class="col-sm-10">
-          <textarea class="form-control" name="curriculum" id="curriculum" rows="3">Estudio en CUCEI</textarea>
+          <textarea class="form-control" name="curriculum" id="curriculum" rows="3" data-type="curriculum">DEFAULT</textarea>
         </div>
       </div>
-      <button type="button" class="btn btn-primary">Cambiar</button>
+      <button type="button" id="btn_informacion" class="btn btn-primary">Cambiar</button>
     </form>
 
     <hr class="my-4">
 
-    <form>
-      <p class="h3">Imagen de Perfil</p>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text">Subir</span>
-        </div>
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" id="inputGroupFile01">
-          <label class="custom-file-label" name="imagen" id="foto" for="inputGroupFile01">Buscar archivo</label>
-        </div>
-      </div>
-    </form>
+
+    <div id="formFoto">
+    </div>
 
     <hr class="my-4">
 
@@ -77,16 +68,16 @@
       <div class="form-group row">
         <label for="staticEmail" class="col-sm-2 col-form-label">Nueva Contraseña</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="contrasena" placeholder="Password">
+          <input type="password" class="form-control" id="contrasena" placeholder="Password" data-type="contrasena">
         </div>
       </div>
       <div class="form-group row">
         <label for="inputPassword" class="col-sm-2 col-form-label">Repetir Contraseña</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="contrasenaVerificar" placeholder="Password">
+          <input type="password" class="form-control" id="contrasenaVerificar" placeholder="Password" data-type="contrasena">
         </div>
       </div>
-      <button type="button" class="btn btn-primary">Cambiar</button>
+      <button type="button" id="btn_contrasena" class="btn btn-primary">Cambiar</button>
     </form>
 
   </section>

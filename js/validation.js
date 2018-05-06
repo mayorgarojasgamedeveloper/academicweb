@@ -1,10 +1,12 @@
 var regex = {
   "usuario": /^[a-z0-9_-]{3,16}$/,
   "contrasena": /^[a-zA-Z0-9_-]{6,18}$/,
-  "correo": /^[a-zA-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/,
+  "correo": /\S+@\S+\.\S+/,
   "nombre": /^[a-zA-Z0-9., ]{3,40}$/,
   "nombreCompleto": /^[a-zA-Z0-9., ]{3,80}$/,
   "nombres": /^[a-zA-Z0-9,. ]{3,200}$/,
+  "curriculum": /^[a-zA-Z0-9,. !-/]{3,200}$/,
+  "foto": /\.(jpg|png)\b/,
   "fecha": /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/
 };
 
@@ -15,6 +17,8 @@ var regexErrors = {
   "nombre": "El campo debe tener entre 3 y 40 letras.",
   "nombreCompleto": "El campo debe tener entre 3 y 80 letras.",
   "nombres": "El campo debe tener entre 3 y 200 letras.",
+  "curriculum": "El campo debe tener entre 3 y 400 letras.",
+  "foto": "No es el formato correcto.",
   "fecha": "Fecha incorrecta."
 };
 
@@ -48,6 +52,11 @@ function validar(element) {
   // Si es un text area
   else if (element.is('textarea')){
     //alert('textarea');
+    if(!reg.test(val)) {
+      console.log(val);
+      error(element, regexErrors[dataType]);
+      return 1;
+    }
   }
   return 0;
 }
