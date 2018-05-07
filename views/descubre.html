@@ -17,16 +17,10 @@
     <form class="container">
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre">
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Autor">
-        </div>
-      </div>
-      <hr class="my-4">
-      <div class="row">
-        <div class="col">
-          <select class="form-control" name="type">
+          <select class="form-control" id="type" name="type">
               <option value="linea">Línea innovadora de investigación aplicada al desarrollo tecnológico</option>
               <option value="produccion">Producción académica</option>
               <option value="proyectos">Proyectos de investigación aplicada y proyectos tecnológicos</option>
@@ -34,18 +28,11 @@
               <option value="estadia">Estadía en empresas</option>
             </select>
         </div>
-        <div class="col">
-            <select class="form-control" name="orderBy">
-              <option value="nombre">Nombre</option>
-              <option value="fecha">Fecha</option>
-              <option value="autor">Autor</option>
-            </select>
-          </div>
       </div>
-      <hr class="my-4">
       <div class="row">
         <div class="col">
-          <button type="submit" class="btn btn-primary">Buscar</button>
+          <br>
+          <button type="button" id="btn_buscar" class="btn btn-primary">Buscar</button>
         </div>
       </div>
     </form>
@@ -53,22 +40,11 @@
 
   <section class="container">
     <h1 class="display-4 text-center">Reportes</h1>
+    <select class="form-control" id="orderBy" name="orderBy">`;
+    </select>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Reporte</th>
-          <th scope="col">Autor</th>
-          <th scope="col">Fecha</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row"><a href="/ver/hola.html">Hola mundo!!</a></th>
-          <td>Fernando Mayorga</td>
-          <td>2018-05-03</td>
-        </tr>
-      </tbody>
+    <table id="table" class="table table-striped">
+
     </table>
   </section>
 
