@@ -81,7 +81,7 @@ $('document').ready(function() {
       location.reload();
     },
     function(){
-      location.reload();
+      alertify.error('Acción Cancelada');
     });
   });
 

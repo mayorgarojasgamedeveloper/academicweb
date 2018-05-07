@@ -14,7 +14,7 @@ $('document').ready(function() {
       return 0;
 
     var usuario = $('#usuario').val();
-    var contrasena = $('#contrasena').val();
+    var contrasena = md5($('#contrasena').val());
 
     var find = $.ajax({url: `http://localhost:3000/usuario/${usuario}/${contrasena}`, method: `get`});
     find.done(function(data) {

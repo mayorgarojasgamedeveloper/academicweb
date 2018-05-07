@@ -76,7 +76,7 @@ $('document').ready(function() {
     }
 
     var objeto = {
-      contrasena: contrasena.val()
+      contrasena: md5(contrasena.val())
     }
 
     $.ajax({url: `http://localhost:3000/usuario/${sesion.usuario}/contrasena`,data: objeto ,method: `put`})

@@ -15,7 +15,7 @@ $('document').ready(function() {
 
     var usuario = {
       usuario: $('#usuario').val(),
-      contrasena: $('#contrasena').val(),
+      contrasena: md5($('#contrasena').val()),
       permisos: $('#permisos').is(':checked')
     }
 

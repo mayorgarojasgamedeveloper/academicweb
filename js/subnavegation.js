@@ -56,7 +56,7 @@ $('document').ready(function() {
   if(Cookies.getJSON('sesion') != null) {
     html += `    <li class="nav-item dropdown">`;
     html += `      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">`;
-    html += `        ${Cookies.getJSON('sesion')["usuario"].toUpperCase()}`;
+    html += `        ${Cookies.getJSON('sesion')["usuario"].toUpperCase()}	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;	&nbsp;`;
     html += `      </a>`;
     html += `      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`;
     html += `        <a class="dropdown-item" href="../perfil.html">Perfil</a>`;

@@ -7,6 +7,8 @@ $('document').ready(function() {
   listaUsuarios.done(function(data) {
     var html = ``;
     $.each(data, function(index, value) {
+      if(Cookies.getJSON('sesion')["usuario"] === value.usuario) return;
+
       html += `<option value="${value.usuario}">${value.usuario}</option>`;
     });
     $('#usuario').append(html);
