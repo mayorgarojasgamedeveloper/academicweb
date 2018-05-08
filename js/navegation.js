@@ -44,8 +44,11 @@ $('document').ready(function() {
       html += `        </a>`;
       html += `        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`;
       html += `          <a class="dropdown-item" href="./usuario/crear.html">Crear</a>`;
-      html += `          <a class="dropdown-item" href="./usuario/eliminar.html">Elimiar</a>`;
+      html += `          <a class="dropdown-item" href="./usuario/eliminar.html">Eliminar</a>`;
       html += `        </div>`;
+      html += `      </li>`;
+      html += `      <li class="nav-item">`;
+      html += `        <a class="nav-link" href="./logs.html">Logs</a>`;
       html += `      </li>`;
     }
   }
@@ -78,8 +81,10 @@ $('document').ready(function() {
   $('#navegation').append(html);
 
   $('#navegation').on('click', '#cerrar', function(){
-    Cookies.remove('sesion');
-    window.location.replace('./index.html');
+    crearLog(`Usuario: ${Cookies.getJSON('sesion')["usuario"]} cerro sesión`, function() {
+      Cookies.remove('sesion');
+      window.location.replace('./index.html');
+    });
   });
 
 });

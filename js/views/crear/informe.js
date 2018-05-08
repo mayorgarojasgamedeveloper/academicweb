@@ -40,11 +40,16 @@ $('document').ready(function() {
       dependencia: $('#dependencia').val()
     }
 
+    $('#btn_subir').attr('disabled', true);
     $.ajax({url: `http://localhost:3000/informetecnico`, data: objeto, method: `post`})
     .done(function(data) {
-      alertify.alert(`Academic`, `El reporte "${objeto["nombre"]}" ha sido subido exitosamente.`, function(){
-        alertify.message('OK');
+      crearLog(`Usuario: ${objeto["usuario"]} creo el reporte "${objeto["nombre"]}"`, function() {
+        alertify.alert(`Academic`, `El reporte "${objeto["nombre"]}" ha sido subido exitosamente.`, function(){
+          alertify.message('OK');
+          $('#btn_subir').attr('disabled', false);
+        });
       });
+
     });
   });
 });

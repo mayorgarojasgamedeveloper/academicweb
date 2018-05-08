@@ -19,11 +19,16 @@ $('document').ready(function() {
       linea: $('#linea').val()
     }
 
+    $('#btn_subir').attr('disabled', true);
     $.ajax({url: `http://localhost:3000/lineainovadora`, data: objeto, method: `post`})
     .done(function(data) {
-      alertify.alert(`Academic`, `La Linea "${objeto["linea"]}" ha sido subida exitosamente.`, function(){
-        alertify.message('OK');
+      crearLog(`Usuario: ${objeto["usuario"]} creo la Linea "${objeto["linea"]}"`, function() {
+        alertify.alert(`Academic`, `La Linea "${objeto["linea"]}" ha sido subida exitosamente.`, function(){
+          alertify.message('OK');
+          $('#btn_subir').attr('disabled', false);
+        });
       });
+
     });
   });
 });

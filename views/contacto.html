@@ -16,18 +16,18 @@
   <section class="container jumbotron">
     <h1 class="display-4 text-center">Contacto</h1>
 
-    <form>
+    <form novalidate>
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Escriba email">
+      <input type="email" class="form-control" id="email" placeholder="Escriba email" data-type="correo" required>
       <label for="nombre">Nombre:</label>
-      <input type="text" class="form-control" id="nombre" placeholder="Escriba nombre">
+      <input type="text" class="form-control" id="nombre" placeholder="Escriba nombre" data-type="nombre" required>
       <label for="telefono">Telefono:</label>
-      <input type="text" class="form-control" id="telefono" placeholder="Escriba telefono">
+      <input type="text" class="form-control" id="telefono" placeholder="Escriba telefono" data-type="nombre" required>
       <label for="mensaje">Mensaje</label>
-      <textarea class="form-control" id="mensaje" rows="3"></textarea>
+      <textarea class="form-control" id="mensaje" rows="3" data-type="curriculum" required></textarea>
 
       <hr class="my-4">
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="button" id="btn_enviar" class="btn btn-primary">Enviar</button>
     </form>
   </section>
 
@@ -36,6 +36,7 @@
   <script src="../js/bootstrap.min.js" type="text/javascript"></script>
   <script src="../js/alertify.min.js" type="text/javascript"></script>
   <script src="../js/js.cookie.js" type="text/javascript"></script>
+  <script src="../js/logs.js" type="text/javascript"></script>
   <!-- VISTAS -->
   <script src="../js/validation.js" type="text/javascript"></script>
   <script src="../js/navegation.js" type="text/javascript"></script>

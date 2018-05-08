@@ -34,7 +34,9 @@ $('document').ready(function() {
     function(){
       $.ajax({url: `http://localhost:3000/lineainovadora`, data: {id: id}, method: `delete`})
       .done(function(data) {
-        window.location.replace("../index.html");
+        crearLog(`Usuario: ${Cookies.getJSON('sesion')['usuario']} borro el reporte "${$('#linea').val()}"`, function() {
+          window.location.replace("../index.html");
+        });
       });
     },
     function(){
@@ -116,9 +118,16 @@ $('document').ready(function() {
     doc.line(15, 40, 190, 40);
 
     doc.setFontSize(15);
-    doc.text('Linea Inovadora', 15, 60);
-    doc.setFontSize(22);
-    doc.text($('#linea').val(), 15, 70);
+    doc.text('Línea innovadora de investigación aplicada al desarrollo tecnológico', 15, 60);
+
+    doc.setFontSize(15);
+    doc.text('Linea: ', 15, 80);
+    doc.setFontSize(19);
+    doc.text($('#linea').val(), 15, 90);
+
+    var d = new Date();
+    doc.setFontSize(10)
+    doc.text(d + "", 50, 270);
 
     doc.save('lineainovadora.pdf');
   });

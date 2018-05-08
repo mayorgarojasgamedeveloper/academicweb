@@ -3,6 +3,11 @@ if(Cookies.get('sesion') == null || Cookies.getJSON('sesion')["permisos"] == fal
 
 $('document').ready(function() {
 
+  $('#usuario').on('blur', function() {
+    $('#usuario').val($('#usuario').val().toLowerCase());
+  });
+
+
   $('#btn_crear').on('click', function() {
     var status = 0;
     $('.error').remove();

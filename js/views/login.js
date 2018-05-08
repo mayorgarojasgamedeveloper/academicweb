@@ -13,7 +13,7 @@ $('document').ready(function() {
     if(status > 0)
       return 0;
 
-    var usuario = $('#usuario').val();
+    var usuario = $('#usuario').val().toLowerCase();
     var contrasena = md5($('#contrasena').val());
 
     var find = $.ajax({url: `http://localhost:3000/usuario/${usuario}/${contrasena}`, method: `get`});
@@ -24,8 +24,10 @@ $('document').ready(function() {
           contrasena: data[0].contrasena,
           permisos: data[0].permisos
         }
-        Cookies.set('sesion', sesion);
-        window.location.replace('./index.html');
+        crearLog(`Usuario: ${sesion["usuario"]} inicio sesión`, function() {
+          Cookies.set('sesion', sesion);
+          window.location.replace('./index.html');
+        });
       } else {
         alertify.error("Usuario y contraseña no coinciden.")
       }
