@@ -18,6 +18,10 @@ $('document').ready(function() {
   });
 
   $('#btn_estadisticas').on('click', function() {
+    window.location.replace("./estadisticas.html");
+  });
+
+  /*$('#btn_estadisticas').on('click', function() {
 
     $.ajax({url: `http://localhost:3000/lineainovadora/estadisticas`, method: `get`})
     .done(function(data) {
@@ -73,9 +77,6 @@ $('document').ready(function() {
       doc.save('estadisticas.pdf')
     });
 
-  });
+  });*/
 
 });
-/*
-    });
-*/
