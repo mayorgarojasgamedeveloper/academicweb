@@ -147,9 +147,9 @@ $('document').ready(function() {
 
     doc.addImage(imgData, 'PNG', 15, 15, 25, 25);
     doc.setFontSize(30);
-    doc.text('Academic.Archives', 15, 35);
+    doc.text('Academic.Archives', 45, 35);
     doc.setLineWidth(0.5);
-    doc.line(15, 10, 190, 10);
+    doc.line(15, 40, 190, 40);
 
     doc.setFontSize(15);
     doc.text('Artículo arbitrado', 15, 60);

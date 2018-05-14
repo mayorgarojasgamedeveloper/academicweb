@@ -17,6 +17,9 @@ $('document').ready(function() {
   $.ajax({url: `http://localhost:3000/lineainovadora/${id}`, method: `get`})
   .done(function(data) {
     console.log(data);
+
+    var htmlUsuario = `<a href="../perfil-publico.html?usuario=${data[0].usuario}">Usuario: ${data[0].usuario}</a><br><br>`;
+    $('#usuario').append(htmlUsuario);
     // Agregar informacion
     $('#linea').val(data[0].linea);
 

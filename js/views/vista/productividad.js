@@ -29,6 +29,9 @@ $('document').ready(function() {
     $.ajax({url: `http://localhost:3000/reporte3/${id}`, method: `get`})
     .done(function(data) {
       console.log(data);
+
+      var htmlUsuario = `<a href="../perfil-publico.html?usuario=${data[0].usuario}">Usuario: ${data[0].usuario}</a><br><br>`;
+      $('#usuario').append(htmlUsuario);
       // Agregar informacion
       $('#nombre').val(data[0].nombre);
       $('#autores').val(data[0].autores);
@@ -141,9 +144,9 @@ $('document').ready(function() {
 
     doc.addImage(imgData, 'PNG', 15, 15, 25, 25);
     doc.setFontSize(30);
-    doc.text('Academic.Archives', 15, 35);
+    doc.text('Academic.Archives', 45, 35);
     doc.setLineWidth(0.5);
-    doc.line(15, 10, 190, 10);
+    doc.line(15, 40, 190, 40);
 
     doc.setFontSize(15);
     doc.text('Productividad innovadora', 15, 60);

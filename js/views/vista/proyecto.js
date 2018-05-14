@@ -20,6 +20,9 @@ $('document').ready(function() {
   $.ajax({url: `http://localhost:3000/proyecto/${id}`, method: `get`})
   .done(function(data) {
     console.log(data);
+
+    var htmlUsuario = `<a href="../perfil-publico.html?usuario=${data[0].usuario}">Usuario: ${data[0].usuario}</a><br><br>`;
+    $('#usuario').append(htmlUsuario);
     // Agregar informacion
     $('#nombre').val(data[0].nombre);
     $('#fecha_inicio').val(data[0].fecha_inicio.substr(0,10));
